@@ -1,2 +1,2 @@
 # studyvuejs
-study
+study vue.js
