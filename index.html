@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>studyvuejs</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script src="/dist/build.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>studyvuejs</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    <h1>{{ greet('afternoon') }}</h1>
+    <p>Name: {{ name }}</p>
+    <p>Job: {{ job }}</p>
+    <a v-bind:href="website">web developer</a>
+    <input type="text" v-bind:value="job">
+    <p v-html="websiteTag"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
 </html>
