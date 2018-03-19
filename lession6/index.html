@@ -10,10 +10,14 @@
 
 <body>
   <div id="vue-app">
-    <h1> 动态 CSS Class </h1>
-    <h2>实例 1</h2>
-    <h2>实例 2</h2>
-
+    <h1> Computed 计算属性 </h1>
+    <button @click="a++">Add to A</button>
+    <button @click="b++">Add to B</button>
+    <p>A - {{ a }}</p>
+    <p>B - {{ b }}</p>
+    <p>Age + A = {{ addToA }}</p>
+    <p>Age + B = {{ addToB }}</p>
+    <p>Age + B = {{ test }}</p>
   </div>
 
   <script src="app.js"></script>
