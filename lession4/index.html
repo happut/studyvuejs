@@ -10,18 +10,11 @@
 
 <body>
   <div id="vue-app">
-    <h1> Events </h1>
-    <button v-on:click.once="add(1)">涨一岁</button>
-    <button v-on:click="subtract(1)">减一岁</button>
-    <button @dblclick="add(10)">涨一岁</button>
-    <button @dblclick="subtract(10)">减一岁</button>
-    <p>My age is {{ age }}</p>
-
-    <div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }} -
-      <span @mousemove.stop=""> Stop Moving</span>
-    </div>
-
-    <a @click.prevent="alert()" href="http://wangfei.ml">wangfei</a>
+    <h1> 键盘事件 </h1>
+    <label>姓名：</label>
+    <input type="text">
+    <label>年龄：</label>
+    <input type="text">
   </div>
 
   <script src="app.js"></script>
