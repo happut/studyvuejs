@@ -2,16 +2,13 @@
 new Vue({
     el: "#vue-app",
     data: {
-        name: "hello",
-        age: ""
+        changeColor: false,
+        changeLength: false
     },
     methods: {
-        logName: function () {
-            // this.name = this.$refs.name.value;
-        },
-        logAge: function () {
-            // this.age = this.$refs.age.value;
-        }
+
+    },
+    computed: {
     }
 });
 

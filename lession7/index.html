@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>studyvuejs</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    <h1> Computed 计算属性 </h1>
+    <button @click="a++">Add to A</button>
+    <button @click="b++">Add to B</button>
+    <p>A - {{ a }}</p>
+    <p>B - {{ b }}</p>
+    <p>Age + A = {{ addToA }}</p>
+    <p>Age + B = {{ addToB }}</p>
+    <p>Age + B = {{ test }}</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
