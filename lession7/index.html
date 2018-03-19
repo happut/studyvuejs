@@ -11,9 +11,16 @@
 <body>
   <div id="vue-app">
     <h1> 动态 CSS Class </h1>
-    <h2>实例 1</h2>
-    <h2>实例 2</h2>
-
+    <h2 v-bind:class="{red:true,blue:true}">实例 1</h2>
+    <div @click="changeColor = !changeColor" v-bind:class="{changeColor:changeColor}">
+      <span>Herry</span>
+    </div>
+    <h2 @click="changeColor = !changeColor" >实例 2</h2>
+    <button @click="changeColor = !changeColor" >changeColor</button>
+    <button @click="changeLength = !changeLength" >changeLength</button>
+    <div v-bind:class="compClasses">
+      <span>Herry</span>
+    </div>
   </div>
 
   <script src="app.js"></script>
