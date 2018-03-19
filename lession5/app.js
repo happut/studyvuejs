@@ -7,10 +7,10 @@ new Vue({
     },
     methods: {
         logName: function () {
-            console.info(this.$refs.name)
+            // this.name = this.$refs.name.value;
         },
         logAge: function () {
-            
+            // this.age = this.$refs.age.value;
         }
     }
 });
