@@ -12,9 +12,9 @@
   <div id="vue-app">
     <h1> 键盘事件 </h1>
     <label>姓名：</label>
-    <input type="text" @keyup.enter="logName">
+    <input rel="name" type="text" @keyup="logName">
     <label>年龄：</label>
-    <input type="text" @keyup.alt.enter="logAge">
+    <input rel="age" type="text" @keyup="logAge">
   </div>
 
   <script src="app.js"></script>
