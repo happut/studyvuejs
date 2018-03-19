@@ -2,14 +2,15 @@
 new Vue({
     el: "#vue-app",
     data: {
-
+        name: "",
+        age: ""
     },
     methods: {
         logName: function () {
-            console.info("正在输入名字...")
+            console.info(this.$refs.name)
         },
         logAge: function () {
-            console.info("正在输入年龄...")
+            
         }
     }
 });
