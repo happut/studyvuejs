@@ -1,6 +1,7 @@
 <template>
   <div class="users">
    <ul>
+     <h1>Hello Users</h1>
        <li v-for="user in users">
            {{ user }}
         </li>
@@ -21,5 +22,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+h1 {
+  color: green;
+}
 </style>

@@ -6,12 +6,11 @@
 </template>
 
 <script>
-
-import Users from './components/Users'
+import Users from "./components/Users";
 
 export default {
   name: "App",
-  components:{
+  components: {
     Users
   },
   data() {
@@ -22,6 +21,8 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
+h1{
+  color: purple;
+}
 </style>
