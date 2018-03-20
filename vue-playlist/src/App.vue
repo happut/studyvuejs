@@ -1,50 +1,23 @@
 <template>
   <div id="app">
-    <app-header v-bind:title="title" @titleChanged="updateTitle($event)"></app-header>
-    <users v-bind:users="users"></users>
-    <users v-bind:users="users"></users>
-    <app-footer v-bind:title="title"></app-footer>
+
+<ul>
+  <li><router-link to="/">Home</router-link></li>
+  <li><router-link to="/helloworld">Helloworld</router-link></li>
+  
+</ul>
+
+<router-view></router-view>
   </div>
 </template>
 
 <script>
-import Users from "./components/Users";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-
 export default {
   name: "App",
-  components: {
-    users: Users,
-    "app-header": Header,
-    "app-footer": Footer
-  },
-  methods: {
-    updateTitle: function(title) {
-      this.title = title;
-    }
-  },
+  components: {},
+  methods: {},
   data() {
-    return {
-      title: "传递的一个值",
-      users: [
-        {
-          name: "wangfei",
-          position: "web开发",
-          show: false
-        },
-        {
-          name: "test",
-          position: "web开发",
-          show: false
-        },
-        {
-          name: "taotao",
-          position: "web开发",
-          show: false
-        }
-      ]
-    };
+    return {};
   }
 };
 </script>
