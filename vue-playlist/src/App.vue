@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <app-header></app-header>
+    <app-header v-bind:title="title" @titleChanged="updateTitle($event)"></app-header>
     <users v-bind:users="users"></users>
-    <app-footer></app-footer>
+    <users v-bind:users="users"></users>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -18,9 +19,14 @@ export default {
     "app-header": Header,
     "app-footer": Footer
   },
+  methods: {
+    updateTitle: function(title) {
+      this.title = title;
+    }
+  },
   data() {
     return {
-      title: "这是我第一个脚手架",
+      title: "传递的一个值",
       users: [
         {
           name: "wangfei",

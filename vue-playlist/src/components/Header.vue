@@ -1,15 +1,26 @@
 <template>
-<header>
-    <h1>{{ title }}</h1>
+<header @click="changeTitle">
+    <h1>{{ title1 }}{{ title }}</h1>
 </header>
 </template>
 
 <script>
 export default {
   name: "app-header",
+  props: {
+    title: {
+      type: String
+    }
+  },
+  methods: {
+    changeTitle: function() {
+      //   this.title = "changed";
+      this.$emit("titleChanged", "子向父传值");
+    }
+  },
   data() {
     return {
-      title: "wangfei.ml Demo"
+      title1: "wangfei.ml Demo"
     };
   }
 };
@@ -17,14 +28,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-header{
-    background: lightgreen;
-    padding: 10px;
+header {
+  background: lightgreen;
+  padding: 10px;
 }
 
 h1 {
-  color:#222;
-  text-align: center
+  color: #222;
+  text-align: center;
 }
 </style>

@@ -7,15 +7,26 @@
            <h3 v-show="user.show">{{user.position}}</h3>
         </li>
    </ul>
+   <button @click="deleteUser">deleteUser</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "users",
-  props: ["users"],
+  props: {
+    users: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
     return {};
+  },
+  methods:{
+    deleteUser:function(){
+      this.users.pop();
+    }
   }
 };
 </script>
